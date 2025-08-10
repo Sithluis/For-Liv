@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pedido de Namoro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe0ec, #ffd6f0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #fff;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 350px;
+      width: 90%;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 2rem;
+      color: #ff2f6c;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #4a2a36;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #ff2f6c;
+      color: #fff;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #e0265e;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.5rem; }
+      p { font-size: 1rem; }
+      button { font-size: 0.9rem; padding: 8px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quer namorar comigo?</h1>
+    <p>Estou apaixonado por você há tanto que nem lembro(Na verdade lembro sim). Você é a garota mais incrível que já vi. 💖</p>
+    <button onclick="aceitou()">Sim! 💕</button>
+    <button onclick="negou()">Não! 💔</button>
+  </div>
+
+  <script>
+    function aceitou() {
+      document.querySelector('.container').innerHTML = '<h1>Ela disse SIM! 🎉</h1><p>Agora somos oficialmente namorados 💑</p>';
+    }
+    function negou() {
+      document.querySelector('.container').innerHTML = '<h1>Deixe de Graça, volta e diga sim 😐</p>';
+    }
+  </script>
+</body>
+</html>
